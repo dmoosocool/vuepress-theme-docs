@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "name": "vuepress-theme-docs",
+  "description": " A mobile ui framework theme for vuepress. Inspired by TaroUI.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmoosocool/vuepress-theme-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmoosocool/vuepress-theme-docs/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run docs:dev",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:serve": "serve --single docs/.vuepress/dist",
+    "docs:clean": "rm -r docs/.vuepress/dist",
+    "lint": "prettier --list-different --write '**/*.{js,vue}'",
+    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist",
+    "test": "prettier --list-different '**/*.{js,vue}'"
+  },
+  "keywords": [
+    "vuepress",
+    "vuepress-theme",
+    "mobile-ui-document",
+    "site-generation"
+  ],
+  "author": "dmoosocool",
+  "license": "MIT"
+}
