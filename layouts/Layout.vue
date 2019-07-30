@@ -7,11 +7,13 @@
           <div
             class="docs-sidebar-nav-item"
             v-for="(list, listkey) in sidebarConfig"
+            :key="listkey"
           >
             <h2 class="docs-sidebar-nav-item__title">{{ list.title }}</h2>
             <ul class="docs-sidebar-nav-item__items">
               <li
-                v-for="item in sidebarList[listkey].items"
+                v-for="(item, key) in sidebarList[listkey].items"
+                :key="key"
                 class="docs-sidebar-nav-item__item"
               >
                 <router-link
@@ -31,7 +33,8 @@
                     <ul class="docs-sidebar-nav-item__childitems">
                       <li
                         class="docs-sidebar-nav-item__childitem"
-                        v-for="childitem in item.items"
+                        v-for="(childitem, childitem_key) in item.items"
+                        :key="childitem_key"
                       >
                         <router-link
                           class="docs-sidebar-nav-item__childitem_link"
