@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Taro UI',
-  theme: 'docs',
+  theme: 'vuepress-theme-docs',
   head: [
     ['link', { rel: 'short icon', type: 'image/x-icon', href: '/images/favicon.ico'}]
   ],
@@ -53,9 +53,9 @@ module.exports = {
       }
     ],
     nav: [
-      { text: 'Home', link: '/index.html' },
-      { text: 'Guide', link: '/guide/0-introduce.html' },
-      { text: 'External', link: 'https://google.com' },
+      { text: '组件', link: 'guide/0-introduce.html' },
+      { text: '主题生成器', link: 'https://nervjs.github.io/taro-ui-theme-preview/' },
+      { text: '关于我们', link: 'https://aotu.io/' },
     ],
 
     sidebarConfig: {
@@ -65,13 +65,14 @@ module.exports = {
       'components': {
         'title': '组件',
         'items': {
-          '0-navigator' : '导航组件',
-          '1-form'      : '表单组件',
-          '2-views'     : '视图组件',
-          '3-feedback'  : '操作反馈',
+          '0-base'      : '基础组件',
+          '1-view'      : '视图组件',
+          '2-feedback'  : '操作反馈',
+          '3-form'      : '表单组件',
+          '4-layouts'   : '布局组件',
         }
       },
     },
-    uiDemoAddress: 'http://localhost:8082'
+    uiDemoAddress: 'https://taro-ui.aotu.io'
   }
 }
