@@ -14,14 +14,12 @@ module.exports = {
         title: '相关资源',
         items: [
           {
-            link: 'https://www.baidu.com',
-            text: '百度',
-            desc: '搜索引擎',
+            link: 'https://taro.jd.com/',
+            text: 'Taro',
           },
           {
-            link: 'https://www.google.com',
-            text: '谷歌',
-            desc: '搜索引擎',
+            link: 'https://taro-ui.aotu.io',
+            text: 'taroUI',
           }
         ]
       },
@@ -30,14 +28,14 @@ module.exports = {
         items: [
           {
             link: 'https://www.baidu.com',
-            text: '反馈建议',
+            text: '百度',
           },
           {
-            link: 'https://www.baidu.com',
-            text: '贡献指南',
+            link: 'https://www.google.com',
+            text: '谷歌',
           },
           {
-            link: 'https://www.baidu.com',
+            link: 'https://www.github.com',
             text: 'Github'
           }
         ]
@@ -53,9 +51,9 @@ module.exports = {
       }
     ],
     nav: [
-      { text: '组件', link: 'guide/0-introduce.html' },
-      { text: '主题生成器', link: 'https://nervjs.github.io/taro-ui-theme-preview/' },
-      { text: '关于我们', link: 'https://aotu.io/' },
+      { text: '组件', link: '/guide/0-introduce.html' },
+      { text: '外链一', link: 'https://www.baidu.com/' },
+      { text: '外链二', link: 'https://www.baidu.com/' },
     ],
 
     sidebarConfig: {

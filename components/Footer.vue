@@ -12,10 +12,17 @@
       }}</span>
     </div>
 
-    <div class="footer-item" v-for="link in data.footerLinks">
+    <div 
+      class="footer-item" 
+      v-for="(link, linkindex) in data.footerLinks"
+      :key="linkindex"
+    >
       <h3>{{ link.title }}</h3>
       <ul>
-        <li v-for="itemlink in link.items">
+        <li 
+          v-for="(itemlink, itemindex) in link.items"
+          :key="itemindex"
+        >
           <a :href="itemlink.link">{{ itemlink.text }}</a>
         </li>
       </ul>
@@ -59,4 +66,12 @@ footer
       list-style none
       padding 0
       margin 0
+    h3 
+      margin 0
+      font-size 18px
+      line-height 27px
+      color #333
+      padding-bottom 20px
+    a
+      color #666
 </style>
