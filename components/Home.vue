@@ -24,7 +24,10 @@
     <div class="feature">
       <h3 class="feature-title">特性</h3>
       <div class="feature-panel">
-        <div class="feature-panel-item" v-for="feature in data.features">
+        <div 
+          class="feature-panel-item" v-for="(feature, featureIndex) in data.features"
+          :key="featureIndex"
+        >
           <div v-if="feature.comingSoon" class="feature-panel-item__comingsoon">
             <img src="/images/panel-tip.png" />
           </div>
@@ -43,9 +46,6 @@ export default {
     data() {
       return this.$page.frontmatter;
     },
-  },
-  mounted() {
-    console.log(this.$page.frontmatter);
-  },
+  }
 };
 </script>
