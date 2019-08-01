@@ -51,10 +51,11 @@ export default {
 <style lang="stylus" scoped>
 footer
   position relative
-  padding 5rem 7.5rem
+  padding 5rem 7.5rem 10rem
   background-color #fff
-  display flex
   z-index 10
+  .footer-container 
+    display flex
   .footer-logo
     display inline-block
     flex 1
@@ -85,9 +86,14 @@ footer
       font-size 14px
       margin-bottom 8px
   .copyright
+    position absolute
+    left 0 
+    bottom 0
+    width 100%
     height 50px
     font-size 14px
-    color rgba(255,255,255,.6)
+    font-weight 500
+    color rgba(255,255,255, .7)
     background #0000c2
     text-align center
 
