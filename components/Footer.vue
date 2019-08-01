@@ -74,4 +74,6 @@ footer
       padding-bottom 20px
     a
       color #666
+      font-size 14px
+      margin-bottom 8px
 </style>
