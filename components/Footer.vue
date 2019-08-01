@@ -1,31 +1,36 @@
 <template>
   <footer>
-    <div class="footer-logo">
-      <img
-        class="footer-logo-img"
-        v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      />
-      <span ref="siteName" class="footer-logo-name" v-if="$siteTitle">{{
-        $siteTitle
-      }}</span>
-    </div>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img
+          class="footer-logo-img"
+          v-if="$site.themeConfig.logo"
+          :src="$withBase($site.themeConfig.logo)"
+          :alt="$siteTitle"
+        />
+        <span ref="siteName" class="footer-logo-name" v-if="$siteTitle">{{
+          $siteTitle
+        }}</span>
+      </div>
 
-    <div 
-      class="footer-item" 
-      v-for="(link, linkindex) in data.footerLinks"
-      :key="linkindex"
-    >
-      <h3>{{ link.title }}</h3>
-      <ul>
-        <li 
-          v-for="(itemlink, itemindex) in link.items"
-          :key="itemindex"
-        >
-          <a :href="itemlink.link">{{ itemlink.text }}</a>
-        </li>
-      </ul>
+      <div 
+        class="footer-item" 
+        v-for="(link, linkindex) in data.footerLinks"
+        :key="linkindex"
+      >
+        <h3>{{ link.title }}</h3>
+        <ul>
+          <li 
+            v-for="(itemlink, itemindex) in link.items"
+            :key="itemindex"
+          >
+            <a :href="itemlink.link">{{ itemlink.text }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      {{ data.copyright }}
     </div>
   </footer>
 </template>
@@ -34,7 +39,10 @@
 export default {
   computed: {
     data() {
-      return this.$site.themeConfig;
+      return {
+        ...this.$site.themeConfig,
+        ...this.$page.frontmatter,
+      }
     },
   },
 };
@@ -76,4 +84,11 @@ footer
       color #666
       font-size 14px
       margin-bottom 8px
+  .copyright
+    height 50px
+    font-size 14px
+    color rgba(255,255,255,.6)
+    background #0000c2
+    text-align center
+
 </style>

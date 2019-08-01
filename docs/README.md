@@ -22,4 +22,6 @@ features:
   img: /images/panel-img4.png
   details: 提供默认的蓝色主题、红色主题以及自定义主题，后期会新增渐变色主题
   comingSoon: true
+
+copyright: Copyright © 2019. All Rights Reserved.
 ---
