@@ -91,6 +91,7 @@ footer
     bottom 0
     width 100%
     height 50px
+    line-height 50px
     font-size 14px
     font-weight 500
     color rgba(255,255,255, .7)
