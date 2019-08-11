@@ -16,11 +16,11 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'admin',
+      user : 'root',
       host : '202.79.162.177',
       ref  : 'origin/master',
       repo : 'git@github.com:dmoosocool/vuepress-theme-docs.git',
-      path : '/home/admin/www/docs',
+      path : '/home/root/www/docs',
       'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
     }
   }
