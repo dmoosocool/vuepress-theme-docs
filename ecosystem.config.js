@@ -3,7 +3,7 @@ module.exports = {
     name: 'docs',
     script: 'npm',
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
-    args: 'run build',
+    args: 'run docs:build',
     env: {
       COMMON_VARIABLE: "true"
     },
