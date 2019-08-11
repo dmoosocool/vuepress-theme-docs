@@ -21,7 +21,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:dmoosocool/vuepress-theme-docs.git',
       path : '/home/admin/www/docs',
-      'post-deploy' : 'npm install && pm2 startOrRelstart ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
     }
   }
 };
