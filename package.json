@@ -27,5 +27,8 @@
     "site-generation"
   ],
   "author": "dmoosocool",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vuepress-theme-docs": "^1.0.7"
+  }
 }
