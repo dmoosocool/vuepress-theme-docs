@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Taro UI',
-  theme: 'vuepress-theme-docs',
+  theme: require.resolve('../../'),
   head: [
     ['link', { rel: 'short icon', type: 'image/x-icon', href: '/images/favicon.ico'}]
   ],

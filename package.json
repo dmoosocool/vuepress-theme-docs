@@ -28,7 +28,10 @@
   ],
   "author": "dmoosocool",
   "license": "MIT",
-  "dependencies": {
-    "vuepress-theme-docs": "^1.0.7"
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "prettier": "^2.5.1",
+    "serve": "^13.0.2",
+    "vuepress": "^1.9.7"
   }
 }
