@@ -34,7 +34,7 @@
           </div>
 
           <div class="feature-panel-item__img">
-            <img :src="$withBase('feature.img')" />
+            <img :src="$withBase(feature.img)" />
           </div>
           <h4 class="feature-panel-item__title">{{ feature.title }}</h4>
           <p class="feature-panel-item__desc">{{ feature.details }}</p>

@@ -22,8 +22,12 @@
       </div>
 
       <div class="navbar-right navbar-links" @show="navList.length">
-        <div class="navbar-links-item" v-for="nav in navList" :key="nav">
-          <router-link :to="$withBase(nav.link)" v-if="!isExternal(nav.link)">
+        <div
+          class="navbar-links-item"
+          v-for="(nav, index) in navList"
+          :key="index"
+        >
+          <router-link :to="nav.link" v-if="!isExternal(nav.link)">
             {{ nav.text }}
           </router-link>
 
