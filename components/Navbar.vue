@@ -22,8 +22,8 @@
       </div>
 
       <div class="navbar-right navbar-links" @show="navList.length">
-        <div class="navbar-links-item" v-for="nav in navList">
-          <router-link :to="nav.link" v-if="!isExternal(nav.link)">
+        <div class="navbar-links-item" v-for="nav in navList" :key="nav">
+          <router-link :to="$withBase(nav.link)" v-if="!isExternal(nav.link)">
             {{ nav.text }}
           </router-link>
 
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from '@parent-theme/util';
+import { isExternal, isMailto, isTel } from '@parent-theme/util';
 export default {
   data() {
     return {

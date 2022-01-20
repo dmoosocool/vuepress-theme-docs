@@ -13,18 +13,15 @@
         }}</span>
       </div>
 
-      <div 
-        class="footer-item" 
+      <div
+        class="footer-item"
         v-for="(link, linkindex) in data.footerLinks"
         :key="linkindex"
       >
         <h3>{{ link.title }}</h3>
         <ul>
-          <li 
-            v-for="(itemlink, itemindex) in link.items"
-            :key="itemindex"
-          >
-            <a :href="itemlink.link">{{ itemlink.text }}</a>
+          <li v-for="(itemlink, itemindex) in link.items" :key="itemindex">
+            <a :href="$withBase(itemlink.link)">{{ itemlink.text }}</a>
           </li>
         </ul>
       </div>
@@ -42,7 +39,7 @@ export default {
       return {
         ...this.$site.themeConfig,
         ...this.$page.frontmatter,
-      }
+      };
     },
   },
 };
@@ -54,7 +51,7 @@ footer
   padding 5rem 7.5rem 10rem
   background-color #fff
   z-index 10
-  .footer-container 
+  .footer-container
     display flex
   .footer-logo
     display inline-block
@@ -75,7 +72,7 @@ footer
       list-style none
       padding 0
       margin 0
-    h3 
+    h3
       margin 0
       font-size 18px
       line-height 27px
@@ -87,7 +84,7 @@ footer
       margin-bottom 8px
   .copyright
     position absolute
-    left 0 
+    left 0
     bottom 0
     width 100%
     height 50px
@@ -97,5 +94,4 @@ footer
     color rgba(255,255,255, .7)
     background #0000c2
     text-align center
-
 </style>
